@@ -1,0 +1,3 @@
+<h2>Cart</h2>
+<bm-cart-item [item]="cardItem" (removed)="removeItemFromCart($event)" *ngFor="let cardItem of items$ | async"></bm-cart-item>
+<h4 class="ui header">Total: {{ total$ | async | currency:'EUR':true:'2.2-4' }}</h4>
