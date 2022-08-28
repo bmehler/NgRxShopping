@@ -16,4 +16,8 @@ export class CartActions {
     createSingle(book:Book) {
         this.redux.dispatch({ type: ADD_ITEM, payload: book });
     }
+
+    removeSingle(book:Book) {
+        this.redux.dispatch({ type: REMOVE_ITEM, payload: book });
+    }
 }

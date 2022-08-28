@@ -18,6 +18,6 @@ export class CartComponent {
   constructor(private cart: CartActions) {}
 
   removeItemFromCart(book:Book) {
-    //this.cart.removeSingle(book);
+    this.cart.removeSingle(book);
   }
 }

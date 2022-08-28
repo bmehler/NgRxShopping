@@ -15,6 +15,13 @@ export function cartReducer(state = INITIAL_STATE, action:any):ICartState {
                 items: enhanced,
                 total: enhanced.map(i => i.price).reduce((x,y) => x+y, 0)
             };
+        case REMOVE_ITEM:
+            const filtered = state.items.filter(book => book.isbn !== action.payload.isbn);
+
+            return {
+                items: filtered,
+                total: filtered.map(i => i.price).reduce((x,y) => x+y, 0)
+            };
         default:
             return state;
     }
